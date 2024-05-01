@@ -1,91 +1,101 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 /*ESTILOS HEADER*/
-header{    
-    font-size: 20px;      
+header {
+    font-size: 20px;
     background-color: #114232;
     grid-area: header;
-}   
 
-.imagen-header{    
-    height: 100px;  
-    overflow: hidden;
 }
 
-header nav {    
+.imagen-header {
+    height: 100px;
+    overflow: hidden;
+    text-align: center;
+}
+
+header nav {
     background-color: #114232;
     color: #F7F6BB;
-    text-align: center;    
+    text-align: center;
 }
 
-header nav ul {   
+header nav ul {
     padding: 3px;
-    list-style: none;    
+    list-style: none;
 }
 
 header nav ul li {
     display: inline-block;
 }
 
-header nav li a{    
+header nav li a {
     padding: 0px 3px;
     text-decoration: none;
     color: #F7F6BB;
 }
 
-header nav ul li a{    
+header nav ul li a {
     padding: 0px 3px;
     text-decoration: none;
     color: #F7F6BB;
 }
 
 
-header nav li a:hover{
+header nav li a:hover {
     background-color: #87A922;
     animation: 0.5s infinite boton-menu;
 }
 
 @keyframes boton-menu {
-    0% { transform: scale(1.0);}
-    50% { transform: scale(1.35);}
-    100% { transform: scale(1.0);}
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
 }
 
-body{
-    
-    
+body {
     background-color: #87A922;
     color: #F7F6BB;
 }
+
 /*ESTILOS RESPONSIVE*/
 /*375px*/
-.container{
-    display: grid;
-    grid-template: repeat(2,auto) /100%; 
-    grid-template-areas: "header"
-    "body";
+@media (min-width: 375px) {
+    .container {
+        display: grid;
+        grid-template: repeat(2, auto) /100%;
+        grid-template-areas: "header"
+            "body";
+    }
 }
+
 /*720px*/
-@media (min-width: 720px){
-    .container{
+@media (min-width: 720px) {
+    .container {
         display: grid;
-        grid-template: repeat(4,auto) /50% 50%; 
+        grid-template: repeat(4, auto) /50% 50%;
         grid-template-areas: "header header"
-        "body body";
+            "body body";
     }
 }
+
 /*1080px*/
-@media (min-width: 1080px){
-    .container{
+@media (min-width: 1080px) {
+    .container {
         display: grid;
-        grid-template: repeat(3,auto) /33,3%; 
+        grid-template: repeat(3, auto) /33, 3%;
         grid-template-areas: "header header header"
-        "body body body"; 
+            "body body body";
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d244f92 (nivelacion)
