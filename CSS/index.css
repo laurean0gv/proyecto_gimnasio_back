@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+}
+
+body main {
+    display: flex;
+}
+
+
+.principal a {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.principal {
+    display: block;
+    position: relative;
+    min-width: 303%;
+}
+
+.imagen-principal {
+    max-width: 100%;
+}
+
+.secundario {
+    border: 0;
+}
+
+.img-sec-izq {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    max-width: 49.8%;
+}
+
+.img-sec-der {
+    padding: 0;
+    margin: 0;
+    max-width: 49.8%;
+}
