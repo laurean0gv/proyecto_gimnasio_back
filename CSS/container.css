@@ -121,6 +121,10 @@ header nav li a:hover {
     text-align: end;
     background-color: #F7F6BB;
 }
+.box a:hover {
+    color: #87A922;
+    animation-name: boton-footer;
+}
 
 
 
