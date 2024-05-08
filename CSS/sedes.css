@@ -1,0 +1,25 @@
+.sedes{
+    display: flex;
+    background-color: #87A922;
+}
+.sedes h2{
+    background-color: #87A922;
+}
+
+@media (min-width: 375px) {
+    .mapas iframe{
+        max-width: 187.5px;
+    }
+}
+
+@media (min-width: 720px) {
+    .mapas iframe{
+        max-width: 360px;
+    }
+}
+
+@media (min-width: 1080px) {
+    .mapas iframe{
+        max-width: 600px;
+    }
+}
