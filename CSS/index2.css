@@ -144,19 +144,24 @@
 @media (min-width: 1080px) {
     .contenedor-principal {
         width: 1200px;
-        height: 650px;
+        height: 645px;
     }
     .img-principal {
         width: 1200px;
-        height: 650px;
+        height: 645px;
     }
 
     .cont-sec-izq {
         max-width: 600px;
+        max-height: 398px;
     }
     .img-sec-izq {
         width: 600px;
         height: 400px;
+    }
+    .cont-sec-der {
+        max-width: 600px;
+        max-height: 398px;
     }
     .img-sec-der {
         width: 596px;
