@@ -16,6 +16,7 @@
     justify-content: flex-start;
     margin: .5rem 0 1rem .25rem;
     text-decoration: none;
+    /* max-width: 50%; */
 }
 .sede-item svg{
     overflow: visible;
@@ -26,16 +27,29 @@
 .sede-item a{
     text-decoration: none;
     color:  #114232;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 @media (min-width: 375px) {
     .mapas iframe{
         max-width: 187.5px;
     }
+    .sedes h2{
+        font-size: 18px;
+    }
+    .sedes .mapas{
+        max-width: 50%;
+    }
+
 }
 
 @media (min-width: 720px) {
     .mapas iframe{
         max-width: 360px;
+    }
+    .sedes h2{
+        font-size: 20px;
     }
 }
 
