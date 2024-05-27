@@ -1,12 +1,12 @@
     .store {
-        display: grid;
+        display: inline-block;
         box-sizing: border-box;
         width: 100%;
         border: 1px solid black;
         margin: 10px auto;
     }
 
-    .card {
+    .producto {
         width: 100%;
         border: 1px solid black;
     }
