@@ -1,20 +1,73 @@
-    .store {
-        display: inline-block;
+    * {
         box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .store {
+        background-color: rgba(0, 0, 0, .1);;
+        box-sizing: border-box;
+        display: block;
         width: 100%;
         border: 1px solid black;
+        
+    }
+
+    .productos {
+        width: 800px;
+        overflow: hidden; 
+        padding: 10px;
         margin: 10px auto;
     }
 
     .producto {
-        width: 100%;
-        border: 1px solid black;
+        width: 282px;
+        height: 467px;
+        margin: 10px 10px 20px 10px;
+        background-color: #fff;
+        overflow: hidden;
+        float: left;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        transition: box-shadow 0.3s;
+    }
+    
+    .producto:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
-    div article img {
-        width: 100%;
+    a{
+        text-decoration: none;
+        color: black;        
+    }
+    .producto img {
+        display: block;
+        max-width: 100%;
+        max-height: 284px;
+        margin: 10px auto;
+       
+    }
+    .producto h3{
+        margin: 10px 10px;
+        font-size: 1em;
+        font-style: normal;
+        font-weight: 400;
     }
 
+    .precio{
+        margin: 10px 10px;
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+    aside {
+        width: 320px;
+        float: left;
+    }
+    
+    aside h2{
+        font-size: 1em;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
     @media (min-width:375px) {
         .card {
             width: 40%;
@@ -25,7 +78,7 @@
     }
 
     @media (min-width:720px) {
-        .card  {
+        .card {
             border: 1px solid blue;
             width: 23%;
             margin-left: 1%;
@@ -33,13 +86,14 @@
         }
 
     }
+
     @media (min-width: 1080px) {
-    .container {
-        display: grid;
-        grid-template: repeat(3, auto) /33%;
-        grid-template-areas: "header header header"
-            "body body body"
-            "footer footer footer";
-        max-width: 1200px;
+        .container {
+            display: grid;
+            grid-template: repeat(3, auto) /33%;
+            grid-template-areas: "header header header"
+                "body body body"
+                "footer footer footer";
+            max-width: 1200px;
+        }
     }
-}
