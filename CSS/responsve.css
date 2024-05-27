@@ -51,6 +51,10 @@ header nav ul li a {
     color: #F7F6BB;
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
 header nav li a:hover {
     background-color: #87A922;
     animation: 0.5s infinite boton-menu;
