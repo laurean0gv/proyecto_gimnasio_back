@@ -1,20 +1,18 @@
-    * {
-        box-sizing: border-box;
-        margin: 0 auto;
-    }
-
     h1{
         display: none;
     }
 
     .store {
+        box-sizing: border-box;
+        margin: 0 auto;
         background-color: rgba(0, 0, 0, .1);
         box-sizing: border-box;
         display: block;
         width: 100%;
         padding-top: 20px;
         grid-area: body;
-        grid-column: 1 / -1;
+
+        padding: 0 0 20px 0;
     }
 
     aside {
@@ -43,7 +41,7 @@
     .productos {
         width: 80%;
         margin: 0 auto;
-        float: right;
+        float: left;
         align-items: center;
     }
 
@@ -61,6 +59,7 @@
         border: 1px solid lightgray;
         border-radius: 5px;
         transition: box-shadow 0.3s;
+
     }
 
     .producto:hover {
@@ -71,13 +70,15 @@
         height: 300px;
         display: flex;
         align-items: center;
-        vertical-align: middle;
+        vertical-align: middle;;
     }
 
     .producto img {
         display: block;
         max-width: 100%;
         max-height: 280px;    
+        /*margin auto para centrar las imagenes*/
+        margin: auto;
     }
 
     .producto h3 {
@@ -98,7 +99,7 @@
     }
 
 
-    
+    /*comente lo que habias hecho para responsive y te dejo en comentarios xq lo hice de la otra forma
     @media (min-width:375px) and (max-width: 720px) {
         aside{
             width: 100%;
@@ -122,4 +123,69 @@
             grid-area: body;
             grid-column: 1 / -1;
         }
+    }*/
+
+    /*no hace falta poner desde hasta xq al ser desde, cuando llega a 720pz entra en la siguiente condicion
+    y lo mismo cuando pasa los 1080
+    el resto lo deje como lo habias hecho vos en 320px*/
+    @media (min-width: 375px) {
+        .store {
+            display: block;
+        }
+        aside{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .productos {
+            width: 100%;
+            margin: auto;
+            /*el pading no hace falta y el margin lo puse en auto
+            padding: 10px;*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+       .producto{
+        width: 90%;
+       }
+    
+    }
+    
+    @media (min-width: 720px) {
+
+        aside {
+            width: 25%;
+            height: 100%;
+
+        }
+        .productos {
+            grid-template-columns: repeat(2, 1fr);
+            width: 70%;
+            margin: 0;
+            align-items: center;
+            padding: 0;
+            display: grid;
+            flex-direction: row;
+            justify-content: flex-start;
+
+        }
+        .producto {
+            width: 95%;
+            display: block;
+            margin: 5px;
+        }   
+    }
+    
+    @media (min-width: 1080px) {
+        aside {
+            width: 15%;
+            height: 100%;
+
+        }
+        .productos {
+            grid-template-columns: repeat(3, 1fr);
+            width: 83%;
+        }
+        
     }
