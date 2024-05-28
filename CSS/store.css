@@ -11,8 +11,8 @@
         width: 100%;
         padding-top: 20px;
         grid-area: body;
-
-        padding: 0 0 20px 0;
+        /*le agregu el padding para separarlo del header y el footer*/  
+        padding: 10px 0 20px 0;
     }
 
     aside {
@@ -155,13 +155,13 @@
     @media (min-width: 720px) {
 
         aside {
-            width: 25%;
+            width: 32%;
             height: 100%;
 
         }
         .productos {
             grid-template-columns: repeat(2, 1fr);
-            width: 70%;
+            width: 68%;
             margin: 0;
             align-items: center;
             padding: 0;
@@ -179,13 +179,13 @@
     
     @media (min-width: 1080px) {
         aside {
-            width: 15%;
+            width: 20%;
             height: 100%;
 
         }
         .productos {
             grid-template-columns: repeat(3, 1fr);
-            width: 83%;
+            width: 78%;
         }
         
     }
