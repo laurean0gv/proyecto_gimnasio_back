@@ -1,0 +1,9 @@
+DB_HOST=localhost
+DB_DIALECT=mysql
+PORT=3306
+
+
+
+DB_USER=xxxx
+DB_PASS=xxxx
+DB_NAME=test
