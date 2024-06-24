@@ -1,6 +1,6 @@
 const express = require ("express")
 const app = express()
-const port=3030
+const port=3000
 const cors = require ("cors")
 const storeRouter = require ("./routes/storeRouter.js")
 const db = require ("./data/db.js")
