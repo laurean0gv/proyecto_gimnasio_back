@@ -1,6 +1,9 @@
 const express = require ("express")
 const app = express()
 const port = process.env.PORT || 3000;
+const DB_NAME = process.env.DB_NAME;
+const DB_USER = process.env.DB_USER;
+const DB_PASS = process.env.DB_PASS;
 const cors = require ("cors")
 const storeRouter = require ("./routes/storeRouter.js")
 const db = require ("./data/db.js")
