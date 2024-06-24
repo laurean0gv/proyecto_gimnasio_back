@@ -1,12 +1,6 @@
 const express = require ("express")
 const app = express()
-<<<<<<< HEAD
-const port=3000
-=======
 const port = process.env.PORT || 3000;
-
-
->>>>>>> 35bea2c (probando listen para subir al servidor)
 const cors = require ("cors")
 const storeRouter = require ("./routes/storeRouter.js")
 const db = require ("./data/db.js")
