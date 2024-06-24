@@ -4,7 +4,7 @@
   "description": "creamos el backend para la seccion store",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js"
   },
   "author": "lvincenty",
   "license": "ISC",
