@@ -12,9 +12,9 @@ const db = new Sequelize("railway","root","ExjEyUiGJhYIcWoBJAncGSdhqXNMTLDH",{
 
 
 const db = new Sequelize(process.env.MYSQLDATABASE,process.env.MYSQLUSER,process.env.MYSQLUSER,{
-    host: process.env.MYSQLHOST,
+    host: "monorail.proxy.rlwy.net",
     dialect: "mysql",
-    port: process.env.MYSQLPORT
+    port: 43201
 })
 console.log("Vamos a ver la configuracion LPM "+db.config);
 
