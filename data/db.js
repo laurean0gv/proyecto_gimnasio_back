@@ -11,7 +11,7 @@ const db = new Sequelize("railway","root","ExjEyUiGJhYIcWoBJAncGSdhqXNMTLDH",{
 });*/
 
 
-const db = new Sequelize(process.env.MYSQLDATABASE,process.env.MYSQLUSER,process.env.MYSQLUSER,{
+const db = new Sequelize(process.env.MYSQLDATABASE,process.env.MYSQLUSER,process.env.MYSQLPASSWORD,{
     host: "monorail.proxy.rlwy.net",
     dialect: "mysql",
     port: 43201
