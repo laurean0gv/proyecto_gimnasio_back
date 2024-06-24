@@ -9,9 +9,11 @@ const db = new Sequelize("railway","root","ExjEyUiGJhYIcWoBJAncGSdhqXNMTLDH",{
     dialect: "mysql",
     port: 43201
 });*/
+const MYSQLDATABASE=process.env.MYSQLDATABASE;
+const MYSQLUSER=process.env.MYSQLUSER;
+const MYSQLPASSWORD=process.env.MYSQLPASSWORD;
 
-
-const db = new Sequelize(process.env.MYSQLDATABASE.toString(),process.env.MYSQLUSER.toString(),process.env.MYSQLPASSWORD.toString(),{
+const db = new Sequelize(MYSQLDATABASE,MYSQLUSER,MYSQLPASSWORD,{
     host: "monorail.proxy.rlwy.net",
     dialect: "mysql",
     port: 43201
