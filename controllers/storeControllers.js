@@ -6,6 +6,7 @@ const storeModel = require("../models/storeModel.js");
 const traerProductos = async (req, res) => {
     try {
         const productos = await storeModel.findAll();
+        console.log(productos);
         res.json(productos);
 
     } catch (error) {
@@ -17,6 +18,7 @@ const traerProductos = async (req, res) => {
 const traerUnProducto = async (req, res) => {
     try {
         const producto = await storeModel.findByPk(req.params.sku);
+        console.log(producto);
         res.json(producto);
     } catch (error) {
         res.json({ message: error.message })

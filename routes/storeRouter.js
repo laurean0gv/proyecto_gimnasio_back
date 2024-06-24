@@ -9,4 +9,6 @@ router.post("/", crearProducto)
 router.put("/:sku", editarProducto)
 router.delete("/:sku", borrarProdcuto)
 
+console.log("Pasamos por el router");
+
 module.exports = router
