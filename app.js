@@ -18,7 +18,6 @@ app.use ("/store", storeRouter)
 const conexionDb = async () => {
     try {
         await db.authenticate();
-        console.log(db.config)
         console.log("conexion db Ok");
     } catch (error) {
         console.log(error);
