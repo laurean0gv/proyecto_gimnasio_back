@@ -16,7 +16,7 @@ const db = new Sequelize(process.env.MYSQLDATABASE,process.env.MYSQLUSER,process
     dialect: "mysql",
     port: process.env.MYSQLPORT
 })
-
+console.log("Vamos a ver la configuracion LPM "+db.config);
 
 /*
 const db = new Sequelize(process.env.DB_NAME,process.env.DB_USER,process.env.DB_PASS,{
