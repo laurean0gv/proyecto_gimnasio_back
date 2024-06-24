@@ -1,5 +1,5 @@
 const {Sequelize} = require ("sequelize")
-
+import { env } from 'node:process'
 const { config } = require ('dotenv');
 config();
 
