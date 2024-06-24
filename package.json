@@ -4,6 +4,7 @@
   "description": "creamos el backend para la seccion store",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon app.js",
     "start": "node app.js"
   },
   "author": "lvincenty",
