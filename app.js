@@ -7,13 +7,17 @@ const DB_PASS = process.env.DB_PASS;
 const cors = require ("cors")
 const storeRouter = require ("./routes/storeRouter.js")
 const db = require ("./data/db.js")
+const path = require('path');
 
 app.use(cors())
 app.use(express.json())
 
-app.get("/", (req, res) => {
-    res.send("estas en home")
+/* app.get("/", (req, res) => {
+    var filePath =path.join(__dirname,  'index.html')
+    res.sendFile(filePath, {contentType: 'text/css',});
 })
+ */
+
 
 app.use ("/store", storeRouter)
 
