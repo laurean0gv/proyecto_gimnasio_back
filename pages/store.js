@@ -25,7 +25,7 @@ mostrarProductos = async () => {
                 <div class="cont-img"><img src="${producto.foto}" alt="${producto.titulo}"></div>
                 <hr>
                     <h3>${producto.descripcion}</h3>
-                    <p class="precio">$${producto.precio}</p>
+                    <p class="precio">$${producto.precio.toFixed(2).toLocaleString("es-Ar")}</p>
             </a>
         </article>`
         }
