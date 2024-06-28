@@ -14,11 +14,12 @@ window.addEventListener("load", () => {
 mostrarProductos = async () => {
 
     try {
-        const resPost = await axios(`http://localhost:3000/store/`)
+        const resPost = await axios(`https://proyectogimnasioback-production.up.railway.app/store/`)
         /* const producto = await axios(`https://proyectogimnasioback-production.up.railway.app/${idProducto}`) */
         let productos="";
         resPost.data.forEach(agregaProducto)
 
+        
         function agregaProducto (producto){
             productos+=`<article class="producto">
             <a href="${producto.foto}">
