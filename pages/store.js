@@ -15,7 +15,7 @@ mostrarProductos = async () => {
 
     try {
         const resPost = await axios(`http://localhost:3000/store/`)
-        /* const producto = await axios(`http://localhost:3000/store/${idProducto}`) */
+        /* const producto = await axios(`https://proyectogimnasioback-production.up.railway.app/${idProducto}`) */
         let productos="";
         resPost.data.forEach(agregaProducto)
 
