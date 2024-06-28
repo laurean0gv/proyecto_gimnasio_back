@@ -16,5 +16,5 @@ const db = new Sequelize(process.env.DB_NAME,process.env.DB_USER,process.env.DB_
     dialect: "mysql",
     port: process.env.DB_PORT
 }) 
-console.log(`Vamos a ver la configuracion LPM ${db.config.database} - ${db.config.username} - ${db.config.host}`);
+
     module.exports=db;

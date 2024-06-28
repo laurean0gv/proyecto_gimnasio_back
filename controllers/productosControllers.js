@@ -1,11 +1,17 @@
 const { where } = require("sequelize");
-const posteosModel = require("../models/storeModel.js");
-const storeModel = require("../models/storeModel.js");
+const posteosModel = require("../models/productosModel.js");
+const storeModel = require("../models/productosModel.js");
+const imagenesModel = require("../models/imagenesModesl.js")
 
 //buscar productos
 const traerProductos = async (req, res) => {
     try {
-        const productos = await storeModel.findAll();
+        
+        const productos = await storeModel.findAll({
+            include: {
+                model: imagenesModel,
+            }
+        });
         res.json(productos);
 
     } catch (error) {

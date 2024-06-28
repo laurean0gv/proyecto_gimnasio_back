@@ -23,7 +23,7 @@ mostrarProductos = async () => {
         function agregaProducto (producto){
             productos+=`<article class="producto">
             <a href="${producto.foto}">
-                <div class="cont-img"><img src="${producto.foto}" alt="${producto.titulo}"></div>
+                <div class="cont-img"><img src="${producto.imagenes.url}" alt="${producto.titulo}"></div>
                 <hr>
                     <h3>${producto.descripcion}</h3>
                     <p class="precio">$${producto.precio.toFixed(2).toLocaleString("es-Ar")}</p>
