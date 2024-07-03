@@ -1,9 +1,10 @@
 const { type } = require("os")
 const db = require ("../data/db")
 const imagenes = require ("./imagenesModesl")
-
+const { Transaction } = require('sequelize');
 const {DataTypes} = require ("sequelize")
 const imagenesModel = require("./imagenesModesl")
+
 
 const productosModel = db.define("productos",{
     id: {type:DataTypes.INTEGER,
@@ -17,11 +18,11 @@ const productosModel = db.define("productos",{
 })
 
 productosModel.hasMany(imagenesModel, {
-    foreignKey: 'idProducto', sourceKey: 'id'
+    foreignKey: 'skuProducto', sourceKey: 'sku'
 })
 
 imagenesModel.belongsTo(productosModel, {
-    foreignKey: 'idProducto', targetKey: 'id'
+    foreignKey: 'skuProducto', targetKey: 'sku'
 })
 
 module.exports=productosModel
