@@ -15,13 +15,15 @@ mostrarProductos = async () => {
 
     try {
         const resPost = await axios(`https://proyectogimnasioback-production.up.railway.app/store/`)
+        
         /* const producto = await axios(`https://proyectogimnasioback-production.up.railway.app/${idProducto}`) */
         let productos = "";
         resPost.data.forEach(agregaProducto)
         function agregaProducto(producto) {
+            console.log(producto);
             productos += `<article class="producto">
-            <a href="${producto.foto}">
-                <div class="cont-img"><img src="${producto.imagenes[0].url}" alt="${producto.titulo}"></div>
+            <a href="${producto.productos_imagenes[0].url}">
+                <div class="cont-img"><img src="${producto.productos_imagenes[0].url}" alt="${producto.titulo}"></div>
                 <hr>
                     <h3>${producto.descripcion}</h3>
                     <p class="precio">$${producto.precio.toFixed(2).toLocaleString("es-Ar")}</p>
