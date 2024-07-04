@@ -36,6 +36,20 @@ const traerUnProducto = async (req, res) => {
     }
 }
 
+//buscar imagenes de un producto
+const traerImagenes = async (req, res) => {
+    try {
+        const imagenes = await imagenesModel.findAll({
+            where: {
+                skuProducto: req.params.sku
+            },
+        });
+        res.json(imagenes);
+    } catch (error) {
+        res.json({ message: error.message })
+    }
+}
+
 //crear un producto
 const crearProducto = async (req, res) => {
     try {
@@ -50,7 +64,7 @@ const crearProducto = async (req, res) => {
 
             res.json({ "message": "Producto creado OK" })
         }
-        else{
+        else {
             res.json({ "message": "Ya existe un producto con este SKU roducto creado OK" })
         }
 
@@ -61,29 +75,24 @@ const crearProducto = async (req, res) => {
 
 //cargar una imagen
 const cargarImagen = async (req, res) => {
-    console.log(req.body);
-    if(JSON.stringify(req.body)){
-        try {
-            if (await productosModel.findByPk(req.params.sku)) {
-                //guardo y recorro el array de imagenes
-                const imagenes = req.body.url
-                imagenes.forEach(async (element) => await console.log(element))
-                imagenes.forEach(async (element) => await imagenesModel.create({
-                    skuProducto: req.params.sku,
-                    url: element.url
-                }));
-                res.json({ "message": "Imagen cargada correctamente OK" })
-            }
-            else {
-                res.json({ "message": "No existe un producto para este SKU" })
-            }
-        } catch (error) {
-            res.json({ message: error })
+    try {
+        if (await productosModel.findByPk(req.params.sku)) {
+            //guardo y recorro el array de imagenes
+            const imagenes = req.body.url
+            imagenes.forEach(async (element) => await console.log(element))
+            imagenes.forEach(async (element) => await imagenesModel.create({
+                skuProducto: req.params.sku,
+                url: element.url
+            }));
+            res.json({ "message": "Imagen cargada correctamente OK" })
         }
-    }
-    else{
+        else {
+            res.json({ "message": "No existe un producto para este SKU" })
+        }
+    } catch (error) {
         res.json({ message: error })
     }
+
 }
 
 //editar un producto
@@ -136,4 +145,4 @@ const borrarImagen = async (req, res) => {
     }
 }
 
-module.exports = { traerUnProducto, traerProductos, crearProducto, editarProducto, borrarProdcuto, borrarImagen, cargarImagen }
+module.exports = { traerUnProducto, traerProductos, crearProducto, editarProducto, borrarProdcuto, borrarImagen, cargarImagen, traerImagenes }
