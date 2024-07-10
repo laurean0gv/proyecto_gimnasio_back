@@ -104,9 +104,12 @@ const editarProducto = async (req, res) => {
         //guardo y recorro el array de imagenes
         const imagenes = req.body.url
 
-        imagenes.forEach(async (element) => await imagenesModel.update({ url: element.url }, {
-            where: { skuProducto: req.params.sku }
-        }))
+        if(imagenes){
+            imagenes.forEach(async (element) => await imagenesModel.update({ url: element.url, idImagenes: element.idImagenes }, {
+                where: { skuProducto: req.params.sku, idImagenes: element.idImagenes }
+            }))    
+        }
+        
         res.json({ "message": "Producto actualizado OK" })
     } catch (error) {
         res.json({ message: error.message })
